@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Votação</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <header>
+      <nav class="bg-blue-800 text-white">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+          <a href="#" class="text-2xl font-bold">Sistema de Votação</a>
+          <ul class="flex space-x-4 items-center">
+            <li><a href="/dashboard.html" class="hover:underline">Dashboard</a></li>
+            <li>
+              <a href="/votacao-agora.html" class="hover:underline">Votação Atual</a>
+            </li>
+            <li><a href="/historico.html" class="hover:underline">Histórico</a></li>
+            <li>
+              <a href="/projetos-futuros.html" class="hover:underline"
+                >Projetos Futuros</a
+              >
+            </li>
+            <li><a href="/novo-projeto.html" class="hover:underline">Novo Projeto</a></li>
+            <li><a href="/perfil.html" class="hover:underline">Perfil</a></li>
+            <li>
+              <a
+                href="/logout.html"
+                class="text-red-400 hover:underline flex items-center"
+              >
+                <i class="bi bi-box-arrow-right mr-2"></i> Sair
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-10 flex-grow">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2">Bem-vindo ao Sistema de Votação</h1>
+        <p class="text-lg text-gray-600">
+          Acompanhe, participe e faça a diferença nas decisões municipais.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white shadow-md rounded-lg p-6 text-center">
+          <h5 class="text-xl font-semibold mb-2">Votação Atual</h5>
+          <p class="text-gray-600 mb-4">
+            Participe da votação que está acontecendo agora na câmara municipal.
+          </p>
+          <a
+            href="/votacao-agora.html"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+            >Acessar</a
+          >
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center">
+          <h5 class="text-xl font-semibold mb-2">Histórico de Votações</h5>
+          <p class="text-gray-600 mb-4">
+            Confira as decisões passadas e veja os detalhes de cada votação.
+          </p>
+          <a
+            href="/historico.html"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+            >Ver Histórico</a
+          >
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center">
+          <h5 class="text-xl font-semibold mb-2">Projetos Futuros</h5>
+          <p class="text-gray-600 mb-4">
+            Veja os projetos que estão aguardando votação no futuro.
+          </p>
+          <a
+            href="/projetos-futuros.html"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+            >Explorar</a
+          >
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center">
+          <h5 class="text-xl font-semibold mb-2">Novo Projeto</h5>
+          <p class="text-gray-600 mb-4">
+            Propor um novo projeto para ser votado na câmara municipal.
+          </p>
+          <a
+            href="/novo-projeto.html"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+            >Propor um Novo Projeto</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-blue-800 text-white py-6 mt-auto">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        <div>
+          <h5 class="text-lg font-bold">Sistema de Votação</h5>
+          <p class="text-sm">
+            Transparência e Participação nas Decisões Municipais
+          </p>
+        </div>
+        <ul class="flex space-x-4 mt-4 md:mt-0">
+          <li><a href="/sobre.html" class="hover:underline">Sobre</a></li>
+          <li><a href="/contato.html" class="hover:underline">Contato</a></li>
+          <li>
+            <a href="/politica-privacidade.html" class="hover:underline"
+              >Política de Privacidade</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="text-center mt-4 text-sm">
+        &copy; 2025 Sistema de Votação. Todos os direitos reservados.
+      </div>
+    </footer>
+  </body>
+</html>

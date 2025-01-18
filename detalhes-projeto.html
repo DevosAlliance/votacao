@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Votação</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Sistema de Votação</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/votacao-agora.html">Votação Atual</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/historico.html"
+                  >Histórico de Votações</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/projetos-futuros.html"
+                  >Projetos Futuros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/novo-projeto.html">Novo Projeto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/perfil.html">Perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-danger" href="/logout.html"
+                  >Sair <i class="bi bi-box-arrow-right"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-5 min-vh-100">
+      <div class="text-center mb-4">
+        <h2 id="cidade">São Paulo</h2>
+        <h6 id="data-hora">Data: --/--/---- --:--</h6>
+      </div>
+
+      <div class="row">
+        <!-- Lista de Votos -->
+        <div class="col-md-8">
+          <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+              <h5>Projeto: Reforma do Parque Central</h5>
+            </div>
+            <div class="card-body">
+              <h6>Descrição:</h6>
+              <p>
+                O projeto visa revitalizar o Parque Central, com melhorias na
+                iluminação, segurança, e áreas de lazer.
+              </p>
+              <h6>Votantes:</h6>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span>João Silva - <i class="text-success">Favor</i></span>
+                </li>
+                <li class="list-group-item">
+                  <span>Maria Souza - <i class="text-danger">Contra</i></span>
+                </li>
+                <li class="list-group-item">
+                  <span
+                    >Carlos Pereira - <i class="text-success">Favor</i></span
+                  >
+                </li>
+                <li class="list-group-item">
+                  <span
+                    >Ana Costa - <i class="text-secondary">Abstenção</i></span
+                  >
+                </li>
+                <li class="list-group-item">
+                  <span>Lucas Almeida - <i class="text-danger">Contra</i></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contador de Resultados -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header bg-dark text-white">
+              <h5>Resultado</h5>
+            </div>
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <span class="text-success d-block">Favor: 2</span>
+                <span class="text-danger d-block">Contra: 2</span>
+                <span class="text-secondary d-block">Abstenções: 1</span>
+              </div>
+              <hr />
+              <p><strong>Quórum:</strong> 5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Atualizar data e hora em tempo real
+      function updateDateTime() {
+        const now = new Date();
+        const formattedDate = now.toLocaleDateString("pt-BR");
+        const formattedTime = now.toLocaleTimeString("pt-BR");
+        document.getElementById(
+          "data-hora"
+        ).textContent = `Data: ${formattedDate} ${formattedTime}`;
+      }
+      setInterval(updateDateTime, 1000);
+
+      updateDateTime();
+    </script>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Sistema de Votação</h5>
+            <p class="mb-0">
+              Transparência e Participação nas Decisões Municipais
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end mt-3 mt-md-0">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="/sobre.html" class="text-white text-decoration-none"
+                  >Sobre</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a href="/contato.html" class="text-white text-decoration-none"
+                  >Contato</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="/politica-privacidade.html"
+                  class="text-white text-decoration-none"
+                  >Política de Privacidade</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <small
+            >&copy; 2025 Sistema de Votação. Todos os direitos
+            reservados.</small
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
